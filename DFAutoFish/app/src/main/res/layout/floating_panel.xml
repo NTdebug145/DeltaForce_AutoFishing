@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#CC1A1A1A"
+    android:padding="10dp">
+
+    <!-- 开关行 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="自动钓鱼"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp" />
+
+        <Switch
+            android:id="@+id/fishingToggle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <!-- 色段标题 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="检测色段（黑 → 亮红）"
+        android:textColor="#DDDDDD"
+        android:textSize="11sp" />
+
+    <!-- 可拖拽色段选择器 -->
+    <kt.dfautofish.ColorRangeSlider
+        android:id="@+id/colorRangeSlider"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
+    <!-- 当前范围数值 -->
+    <TextView
+        android:id="@+id/rangeText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="R 范围: 51 - 204"
+        android:textColor="#AAAAAA"
+        android:textSize="10sp" />
+
+    <!-- 状态 -->
+    <TextView
+        android:id="@+id/statusText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="已停止"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp" />
+
+</LinearLayout>
